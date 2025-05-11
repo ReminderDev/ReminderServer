@@ -1,10 +1,16 @@
-from dataclasses import dataclass
-from typing import List
-from task import Task
+import json
 
+with open("users.json", "r") as f:
+    users = json.load(f)
 
-@dataclass
-class User:
-    name: str
-    password: str
+def verify_user(username: str, password: str) -> bool:
+    for user in users:
+        if user["username"] == username and user["password"] == password:
+            return True
+    return False
 
+def get_id_by_username(username: str) -> int | None:
+    for user in users:
+        if user["username"] == username:
+            return user["id"]
+    return None
