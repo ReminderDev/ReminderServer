@@ -123,8 +123,4 @@ class TaskManager():
         while True:
             for task in self._tasks:
                 await self._check_to_announce(task)
-                print(f"Task {task.name} is {task.time_check().value}")
-            if DEBUG:
-                await asyncio.sleep(5)
-                continue
             await asyncio.sleep(60)
