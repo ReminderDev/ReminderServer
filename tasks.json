@@ -1,1 +1,17 @@
-[]
+[
+    {
+        "id": 0,
+        "user_id": 1,
+        "name": "Test Task",
+        "description": "This is a test task",
+        "date": {
+            "year": 2025,
+            "month": 5,
+            "day": 11,
+            "hour": 18,
+            "minute": 36
+        },
+        "repeat_days": null,
+        "repeat_count": null
+    }
+]
